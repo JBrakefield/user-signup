@@ -11,19 +11,29 @@
     <body>
         <h1>User Signup</h1>
 
-        <form action="/hello" method="post">
-            <label for="username">Username</label>
-            <input id="username" type="text" name="username" />
-
-            <label for="password">Password</label>
-            <input id="password" type="password" name="password" />
-
-            <label for="vfypassword">Verify Password</label>
-            <input id="vfypassword" type="password" name="vfypassword" />
-
-            <label for="email">Email (Optional)</label>
-            <input id="email" type="text" name="email" />
-
+        <form method="post">
+            <table>
+                <tr>
+                    <td><label for="username">Username</label></td>
+                    <td><input type="text" name="username" value="{{user_name}}" /></td>
+                    <td class="error">{{user_name_error}}</td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td><input type="password" name="password" value=""/></td>
+                    <td class="error">{{password1_error}}</td>
+                </tr>
+                <tr>
+                    <td><label for="vfypassword">Verify Password</label></td>
+                    <td><input type="password" name="vfypassword" value=""/></td>
+                    <td class="error">{{password2_error}}</td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email (Optional)</label></td>
+                    <td><input type="text" name="email" value="{{email_address}}"/></td>
+                    <td class="error">{{email_error}}</td>
+                </tr>
+            </table>
             <input type="submit" />
         </form>
 
